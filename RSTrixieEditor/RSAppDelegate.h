@@ -7,9 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
+
+#import <RSTrixiePlugin/RSTrixiePlugin.h>
+#import "RSTrixieEditor.h"
+#import "RSTrixieBrowser.h"
 
 @interface RSAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+	//@property (retain) IBOutlet NSWindow * window;
+@property (retain) IBOutlet RSTrixieEditor * editorController;
+@property (retain) IBOutlet RSTrixieBrowser * browserController;
+
 
 @end
