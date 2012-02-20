@@ -39,6 +39,10 @@
 		03530C2414F09F69002E9A5E /* ActionKeyUp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C2314F09F69002E9A5E /* ActionKeyUp.bundle */; };
 		03530C9014F0A9F1002E9A5E /* ReactionAddClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C8F14F0A9F1002E9A5E /* ReactionAddClass.bundle */; };
 		03530C9214F0A9F4002E9A5E /* ReactionRemoveClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C9114F0A9F4002E9A5E /* ReactionRemoveClass.bundle */; };
+		038655BA14F1751F0054E026 /* ConditionHasClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 038655B914F1751F0054E026 /* ConditionHasClass.bundle */; };
+		0386561A14F18C190054E026 /* ConditionValue.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386561914F18C190054E026 /* ConditionValue.bundle */; };
+		0386564514F18C800054E026 /* ConditionStatus.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386564414F18C800054E026 /* ConditionStatus.bundle */; };
+		03DB6C7514F0D4770078618C /* RSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB6C7414F0D4770078618C /* RSWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +66,9 @@
 				03530C2414F09F69002E9A5E /* ActionKeyUp.bundle in CopyFiles */,
 				03530C1E14F09F4D002E9A5E /* ActionDoubleClick.bundle in CopyFiles */,
 				03530C1414F09F18002E9A5E /* ActionChange.bundle in CopyFiles */,
+				038655BA14F1751F0054E026 /* ConditionHasClass.bundle in CopyFiles */,
+				0386561A14F18C190054E026 /* ConditionValue.bundle in CopyFiles */,
+				0386564514F18C800054E026 /* ConditionStatus.bundle in CopyFiles */,
 				03530C1014F09EFD002E9A5E /* ActionMouseUp.bundle in CopyFiles */,
 				03530C2014F09F57002E9A5E /* ActionSelect.bundle in CopyFiles */,
 				03530C1214F09F0C002E9A5E /* ActionMouseDown.bundle in CopyFiles */,
@@ -115,6 +122,11 @@
 		03530C2314F09F69002E9A5E /* ActionKeyUp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ActionKeyUp.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03530C8F14F0A9F1002E9A5E /* ReactionAddClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ReactionAddClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03530C9114F0A9F4002E9A5E /* ReactionRemoveClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ReactionRemoveClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		038655B914F1751F0054E026 /* ConditionHasClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionHasClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0386561914F18C190054E026 /* ConditionValue.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionValue.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0386564414F18C800054E026 /* ConditionStatus.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionStatus.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DB6C7314F0D4770078618C /* RSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWebView.h; sourceTree = "<group>"; };
+		03DB6C7414F0D4770078618C /* RSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +199,7 @@
 			children = (
 				03530C9414F0AA1C002E9A5E /* Actions */,
 				03530C9314F0AA07002E9A5E /* Reactions */,
+				038655EE14F179600054E026 /* Conditions */,
 				0353095314F0318C002E9A5E /* NSView+RSPositionView.h */,
 				0353095414F0318C002E9A5E /* NSView+RSPositionView.m */,
 				0353093814F02EE9002E9A5E /* RSTrixieEditor-Info.plist */,
@@ -204,6 +217,8 @@
 				0353096414F03414002E9A5E /* RSTrixieBrowser.h */,
 				0353096514F03414002E9A5E /* RSTrixieBrowser.m */,
 				0353096214F033F7002E9A5E /* RSTrixieBrowser.xib */,
+				03DB6C7314F0D4770078618C /* RSWebView.h */,
+				03DB6C7414F0D4770078618C /* RSWebView.m */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
@@ -250,6 +265,16 @@
 				03530A1D14F065F7002E9A5E /* ActionMouseOver.bundle */,
 			);
 			name = Actions;
+			sourceTree = "<group>";
+		};
+		038655EE14F179600054E026 /* Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				0386564414F18C800054E026 /* ConditionStatus.bundle */,
+				0386561914F18C190054E026 /* ConditionValue.bundle */,
+				038655B914F1751F0054E026 /* ConditionHasClass.bundle */,
+			);
+			name = Conditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +349,7 @@
 				0353095514F0318C002E9A5E /* NSView+RSPositionView.m in Sources */,
 				0353095914F031A9002E9A5E /* RSTrixieEditor.m in Sources */,
 				0353096614F03414002E9A5E /* RSTrixieBrowser.m in Sources */,
+				03DB6C7514F0D4770078618C /* RSWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
