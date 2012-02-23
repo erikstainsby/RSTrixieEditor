@@ -12,12 +12,16 @@
 #import <RSTrixiePlugin/RSTrixiePlugin.h>
 #import "RSTrixieEditor.h"
 #import "RSTrixieBrowser.h"
+#import "PreferencesController.h"
 
 @interface RSAppDelegate : NSObject <NSApplicationDelegate>
 
 	//@property (retain) IBOutlet NSWindow * window;
 @property (retain) IBOutlet RSTrixieEditor * editorController;
 @property (retain) IBOutlet RSTrixieBrowser * browserController;
+@property (retain) IBOutlet PreferencesController * prefsController; 
 
+
+- (IBAction) showPreferences:(id)sender;
 
 @end

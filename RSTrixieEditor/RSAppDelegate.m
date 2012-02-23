@@ -14,6 +14,7 @@
 
 @synthesize editorController;
 @synthesize browserController;
+@synthesize prefsController;
 
 - (id)init {
 	if(nil!=(self=[super init]))
@@ -23,8 +24,10 @@
 		editorController = [[RSTrixieEditor alloc] init];
 		[[editorController window] makeKeyAndOrderFront:self];
 		
-		browserController = [[RSTrixieBrowser alloc] init];
+		browserController = [[RSTrixieBrowser alloc] initWithEditor:editorController];
 		[[browserController window] makeKeyAndOrderFront:self];
+		
+		prefsController = [[PreferencesController alloc] init];
 	}
 	return self;
 }
@@ -33,5 +36,11 @@
 {
 	// Insert code here to initialize your application
 }
+
+- (IBAction) showPreferences:(id)sender {
+	
+	[[prefsController window] makeKeyAndOrderFront:nil];
+}
+
 
 @end

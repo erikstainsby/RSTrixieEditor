@@ -8,14 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
+#import "RSTrixieEditor.h"
 
-@interface RSTrixieBrowser : NSWindowController < NSComboBoxDataSource >
+@interface RSTrixieBrowser : NSWindowController < NSComboBoxDataSource, NSComboBoxDelegate >
 
-@property (retain) IBOutlet NSArray * resourceCache;
-@property (retain) IBOutlet NSMutableArray * history;
+@property (retain) NSArray * resourceCache;
+@property (retain) NSMutableArray * history;
 @property (retain) IBOutlet NSComboBox * urlLocationBox;
 @property (retain) IBOutlet WebView * webview;
 
+@property (retain) RSTrixieEditor * editor;
+
+- (id)initWithEditor:(RSTrixieEditor*)trixie;
 
 #pragma mark - WebView delegate methods
 
@@ -28,5 +32,19 @@
 
 - (NSInteger) numberOfItemsInComboBox:(NSComboBox *)aComboBox;
 - (id) comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index;
+
+
+#pragma mark - WebUIDelegate methods
+
+- (void)webView:(WebView *)sender makeFirstResponder:(NSResponder *)responder;
+	//- (void)webView:(WebView *)sender mouseDidMoveOverElement:(NSDictionary *)elementInformation modifierFlags:(NSUInteger)modifierFlags;
+- (NSArray *)webView:(WebView *)sender contextMenuItemsForElement:(NSDictionary *)element defaultMenuItems:(NSArray *)defaultMenuItems;
+
+
+#pragma mark - relay settings to editorController
+
+- (IBAction) quickSetActionSelector:(id)sender;
+- (IBAction) quickSetReactionSelector:(id)sender;
+- (IBAction) quickSetConditionSelector:(id)sender;
 
 @end

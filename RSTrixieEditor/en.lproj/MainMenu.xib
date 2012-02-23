@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1070</int>
 		<string key="IBDocument.SystemVersion">11D50</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2177</string>
 		<string key="IBDocument.AppKitVersion">1138.32</string>
 		<string key="IBDocument.HIToolboxVersion">568.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1938</string>
+			<string key="NS.object.0">2177</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSMenu</string>
@@ -1930,6 +1930,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
+						<string key="label">showPreferences:</string>
+						<reference key="source" ref="1014"/>
+						<reference key="destination" ref="609285721"/>
+					</object>
+					<int key="connectionID">538</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
 						<string key="label">addFontTrait:</string>
 						<reference key="source" ref="755631768"/>
 						<reference key="destination" ref="305399458"/>
@@ -3112,66 +3120,114 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">535</int>
+			<int key="maxID">538</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">NSDocument</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="printDocument:">id</string>
-						<string key="revertDocumentToSaved:">id</string>
-						<string key="runPageLayout:">id</string>
-						<string key="saveDocument:">id</string>
-						<string key="saveDocumentAs:">id</string>
-						<string key="saveDocumentTo:">id</string>
+					<string key="className">HelpController</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">showHelp:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">showHelp:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">showHelp:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="helpCaption">NSTextField</string>
+						<string key="helpText">NSTextField</string>
+						<string key="popover">NSPopover</string>
 					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="printDocument:">
-							<string key="name">printDocument:</string>
-							<string key="candidateClassName">id</string>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="helpCaption">
+							<string key="name">helpCaption</string>
+							<string key="candidateClassName">NSTextField</string>
 						</object>
-						<object class="IBActionInfo" key="revertDocumentToSaved:">
-							<string key="name">revertDocumentToSaved:</string>
-							<string key="candidateClassName">id</string>
+						<object class="IBToOneOutletInfo" key="helpText">
+							<string key="name">helpText</string>
+							<string key="candidateClassName">NSTextField</string>
 						</object>
-						<object class="IBActionInfo" key="runPageLayout:">
-							<string key="name">runPageLayout:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="saveDocument:">
-							<string key="name">saveDocument:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="saveDocumentAs:">
-							<string key="name">saveDocumentAs:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="saveDocumentTo:">
-							<string key="name">saveDocumentTo:</string>
-							<string key="candidateClassName">id</string>
+						<object class="IBToOneOutletInfo" key="popover">
+							<string key="name">popover</string>
+							<string key="candidateClassName">NSPopover</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSDocument.h</string>
+						<string key="minorKey">./Classes/HelpController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSLayoutConstraint</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">PreferencesController</string>
+					<string key="superclassName">NSWindowController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">showPreferences:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">showPreferences:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">showPreferences:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="defaults">NSUserDefaultsController</string>
+						<string key="googleAPIKey">NSLayoutConstraint</string>
+						<string key="jqueryUIVersion">NSLayoutConstraint</string>
+						<string key="jqueryVersion">NSLayoutConstraint</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="defaults">
+							<string key="name">defaults</string>
+							<string key="candidateClassName">NSUserDefaultsController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="googleAPIKey">
+							<string key="name">googleAPIKey</string>
+							<string key="candidateClassName">NSLayoutConstraint</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="jqueryUIVersion">
+							<string key="name">jqueryUIVersion</string>
+							<string key="candidateClassName">NSLayoutConstraint</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="jqueryVersion">
+							<string key="name">jqueryVersion</string>
+							<string key="candidateClassName">NSLayoutConstraint</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/PreferencesController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">RSAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="browserController">RSTrixieBrowser</string>
 						<string key="editorController">RSTrixieEditor</string>
-						<string key="window">NSWindow</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="browserController">
+							<string key="name">browserController</string>
+							<string key="candidateClassName">RSTrixieBrowser</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="editorController">
 							<string key="name">editorController</string>
 							<string key="candidateClassName">RSTrixieEditor</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="window">
-							<string key="name">window</string>
-							<string key="candidateClassName">NSWindow</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -3180,25 +3236,133 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">RSTrixieBrowser</string>
+					<string key="superclassName">NSWindowController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="goForwardOrBack:">id</string>
+						<string key="quickSetActionSelector:">id</string>
+						<string key="quickSetConditionSelector:">id</string>
+						<string key="quickSetReactionSelector:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="goForwardOrBack:">
+							<string key="name">goForwardOrBack:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="quickSetActionSelector:">
+							<string key="name">quickSetActionSelector:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="quickSetConditionSelector:">
+							<string key="name">quickSetConditionSelector:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="quickSetReactionSelector:">
+							<string key="name">quickSetReactionSelector:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="urlLocationBox">NSComboBox</string>
+						<string key="webview">WebView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="urlLocationBox">
+							<string key="name">urlLocationBox</string>
+							<string key="candidateClassName">NSComboBox</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="webview">
+							<string key="name">webview</string>
+							<string key="candidateClassName">WebView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/RSTrixieBrowser.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">RSTrixieEditor</string>
 					<string key="superclassName">NSWindowController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="addRule:">id</string>
+						<string key="removeRule:">id</string>
+						<string key="saveRule:">id</string>
+						<string key="setActionSelectorStringValue:">id</string>
+						<string key="setConditionSelectorStringValue:">id</string>
+						<string key="setReactionSelectorStringValue:">id</string>
+						<string key="showActionHelp:">id</string>
+						<string key="showConditionHelp:">id</string>
+						<string key="showReactionHelp:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="addRule:">
+							<string key="name">addRule:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="removeRule:">
+							<string key="name">removeRule:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="saveRule:">
+							<string key="name">saveRule:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="setActionSelectorStringValue:">
+							<string key="name">setActionSelectorStringValue:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="setConditionSelectorStringValue:">
+							<string key="name">setConditionSelectorStringValue:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="setReactionSelectorStringValue:">
+							<string key="name">setReactionSelectorStringValue:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showActionHelp:">
+							<string key="name">showActionHelp:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showConditionHelp:">
+							<string key="name">showConditionHelp:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showReactionHelp:">
+							<string key="name">showReactionHelp:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="actionHelp">NSButton</string>
 						<string key="actionMenu">NSPopUpButton</string>
 						<string key="actionPanel">NSView</string>
 						<string key="actionPlugins">NSArray</string>
+						<string key="activeActionPlugin">RSTrixiePlugin</string>
+						<string key="activeConditionPlugin">RSTrixiePlugin</string>
+						<string key="activeReactionPlugin">RSTrixiePlugin</string>
 						<string key="box1">NSBox</string>
 						<string key="box2">NSBox</string>
 						<string key="box3">NSBox</string>
 						<string key="commentPanel">NSView</string>
+						<string key="conditionHelp">NSButton</string>
 						<string key="conditionMenu">NSPopUpButton</string>
 						<string key="conditionPanel">NSView</string>
 						<string key="conditionPlugins">NSArray</string>
+						<string key="conditionPopover">NSPopover</string>
+						<string key="popover">NSPopover</string>
+						<string key="reactionHelp">NSButton</string>
 						<string key="reactionMenu">NSPopUpButton</string>
 						<string key="reactionPanel">NSView</string>
 						<string key="reactionPlugins">NSArray</string>
+						<string key="reactionPopover">NSPopover</string>
 						<string key="segmentedControl">NSSegmentedControl</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="actionHelp">
+							<string key="name">actionHelp</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="actionMenu">
 							<string key="name">actionMenu</string>
 							<string key="candidateClassName">NSPopUpButton</string>
@@ -3210,6 +3374,18 @@
 						<object class="IBToOneOutletInfo" key="actionPlugins">
 							<string key="name">actionPlugins</string>
 							<string key="candidateClassName">NSArray</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="activeActionPlugin">
+							<string key="name">activeActionPlugin</string>
+							<string key="candidateClassName">RSTrixiePlugin</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="activeConditionPlugin">
+							<string key="name">activeConditionPlugin</string>
+							<string key="candidateClassName">RSTrixiePlugin</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="activeReactionPlugin">
+							<string key="name">activeReactionPlugin</string>
+							<string key="candidateClassName">RSTrixiePlugin</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="box1">
 							<string key="name">box1</string>
@@ -3227,6 +3403,10 @@
 							<string key="name">commentPanel</string>
 							<string key="candidateClassName">NSView</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="conditionHelp">
+							<string key="name">conditionHelp</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="conditionMenu">
 							<string key="name">conditionMenu</string>
 							<string key="candidateClassName">NSPopUpButton</string>
@@ -3238,6 +3418,18 @@
 						<object class="IBToOneOutletInfo" key="conditionPlugins">
 							<string key="name">conditionPlugins</string>
 							<string key="candidateClassName">NSArray</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="conditionPopover">
+							<string key="name">conditionPopover</string>
+							<string key="candidateClassName">NSPopover</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="popover">
+							<string key="name">popover</string>
+							<string key="candidateClassName">NSPopover</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="reactionHelp">
+							<string key="name">reactionHelp</string>
+							<string key="candidateClassName">NSButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="reactionMenu">
 							<string key="name">reactionMenu</string>
@@ -3251,6 +3443,10 @@
 							<string key="name">reactionPlugins</string>
 							<string key="candidateClassName">NSArray</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="reactionPopover">
+							<string key="name">reactionPopover</string>
+							<string key="candidateClassName">NSPopover</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="segmentedControl">
 							<string key="name">segmentedControl</string>
 							<string key="candidateClassName">NSSegmentedControl</string>
@@ -3259,6 +3455,33 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/RSTrixieEditor.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">RSTrixiePlugin</string>
+					<string key="superclassName">NSViewController</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="name">NSString</string>
+						<string key="rules">NSMutableArray</string>
+						<string key="selectorField">NSTextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="name">
+							<string key="name">name</string>
+							<string key="candidateClassName">NSString</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="rules">
+							<string key="name">rules</string>
+							<string key="candidateClassName">NSMutableArray</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="selectorField">
+							<string key="name">selectorField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/RSTrixiePlugin.h</string>
 					</object>
 				</object>
 			</array>

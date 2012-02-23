@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0301B0E014F5FBF800CDB154 /* ResponderTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301B0DF14F5FBF800CDB154 /* ResponderTrace.m */; };
 		0353093114F02EE9002E9A5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0353093014F02EE9002E9A5E /* Cocoa.framework */; };
 		0353093B14F02EE9002E9A5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0353093914F02EE9002E9A5E /* InfoPlist.strings */; };
 		0353093D14F02EE9002E9A5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353093C14F02EE9002E9A5E /* main.m */; };
@@ -43,6 +44,9 @@
 		0386561A14F18C190054E026 /* ConditionValue.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386561914F18C190054E026 /* ConditionValue.bundle */; };
 		0386564514F18C800054E026 /* ConditionStatus.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386564414F18C800054E026 /* ConditionStatus.bundle */; };
 		03DB6C7514F0D4770078618C /* RSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB6C7414F0D4770078618C /* RSWebView.m */; };
+		03FCEBD314F324BF00CD55B6 /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FCEBD214F324BF00CD55B6 /* HelpController.m */; };
+		03FCEBDA14F47D9900CD55B6 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FCEBD814F47D9900CD55B6 /* PreferencesController.m */; };
+		03FCEBDB14F47D9900CD55B6 /* PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FCEBD914F47D9900CD55B6 /* PreferencesController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0301B0DE14F5FBF800CDB154 /* ResponderTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderTrace.h; sourceTree = "<group>"; };
+		0301B0DF14F5FBF800CDB154 /* ResponderTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTrace.m; sourceTree = "<group>"; };
 		0353092C14F02EE9002E9A5E /* RSTrixieEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTrixieEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0353093014F02EE9002E9A5E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0353093314F02EE9002E9A5E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +133,11 @@
 		0386564414F18C800054E026 /* ConditionStatus.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionStatus.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DB6C7314F0D4770078618C /* RSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWebView.h; sourceTree = "<group>"; };
 		03DB6C7414F0D4770078618C /* RSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebView.m; sourceTree = "<group>"; };
+		03FCEBD114F324BF00CD55B6 /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
+		03FCEBD214F324BF00CD55B6 /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
+		03FCEBD714F47D9900CD55B6 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		03FCEBD814F47D9900CD55B6 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		03FCEBD914F47D9900CD55B6 /* PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +197,9 @@
 			children = (
 				0353094214F02EE9002E9A5E /* RSAppDelegate.h */,
 				0353094314F02EE9002E9A5E /* RSAppDelegate.m */,
+				03FCEBD714F47D9900CD55B6 /* PreferencesController.h */,
+				03FCEBD814F47D9900CD55B6 /* PreferencesController.m */,
+				03FCEBD914F47D9900CD55B6 /* PreferencesController.xib */,
 				0353096A14F05055002E9A5E /* Editor */,
 				0353096914F05036002E9A5E /* Browser */,
 				0353094514F02EEA002E9A5E /* MainMenu.xib */,
@@ -207,6 +221,8 @@
 				0353093C14F02EE9002E9A5E /* main.m */,
 				0353093E14F02EE9002E9A5E /* RSTrixieEditor-Prefix.pch */,
 				0353093F14F02EE9002E9A5E /* Credits.rtf */,
+				0301B0DE14F5FBF800CDB154 /* ResponderTrace.h */,
+				0301B0DF14F5FBF800CDB154 /* ResponderTrace.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +245,8 @@
 				0353095614F031A9002E9A5E /* RSTrixieEditor.h */,
 				0353095714F031A9002E9A5E /* RSTrixieEditor.m */,
 				0353095814F031A9002E9A5E /* RSTrixieEditor.xib */,
+				03FCEBD114F324BF00CD55B6 /* HelpController.h */,
+				03FCEBD214F324BF00CD55B6 /* HelpController.m */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -334,6 +352,7 @@
 				0353094714F02EEA002E9A5E /* MainMenu.xib in Resources */,
 				0353095A14F031A9002E9A5E /* RSTrixieEditor.xib in Resources */,
 				0353096314F033F7002E9A5E /* RSTrixieBrowser.xib in Resources */,
+				03FCEBDB14F47D9900CD55B6 /* PreferencesController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +369,9 @@
 				0353095914F031A9002E9A5E /* RSTrixieEditor.m in Sources */,
 				0353096614F03414002E9A5E /* RSTrixieBrowser.m in Sources */,
 				03DB6C7514F0D4770078618C /* RSWebView.m in Sources */,
+				03FCEBD314F324BF00CD55B6 /* HelpController.m in Sources */,
+				03FCEBDA14F47D9900CD55B6 /* PreferencesController.m in Sources */,
+				0301B0E014F5FBF800CDB154 /* ResponderTrace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
