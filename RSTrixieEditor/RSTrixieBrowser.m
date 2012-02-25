@@ -18,7 +18,7 @@
 @synthesize history;
 @synthesize urlLocationBox;
 @synthesize webview;
-
+@synthesize pageDict;
 @synthesize editor;
 
 - (id)initWithEditor:(RSTrixieEditor*)trixie {
@@ -28,15 +28,34 @@
 		[self setEditor:trixie];
 		[[webview menu] setAutoenablesItems:NO];
 		[webview setMaintainsBackForwardList:YES];
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectScript:) name:nnRSTrixieReloadJavascriptNotification object:nil];
     }
     return self;
 }
+
+- (BOOL) scanCacheForResourceWithName:(NSString*)resourceName {
+
+	for(WebResource * wr in resourceCache) {
+		if( [[[wr URL] lastPathComponent] hasPrefix:resourceName] ) 
+		{
+			NSLog(@"%s- [%04d] identified resource: %@ in URL: %@", __PRETTY_FUNCTION__, __LINE__, resourceName, [[wr URL] path]);
+			return YES;
+		}
+	}
+	return NO;
+}
+
 
 - (void) webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
 	if( [sender mainFrame] == frame )
 	{
 			//		NSLog(@"%s- [%04d] %@", __PRETTY_FUNCTION__, __LINE__, @"");
 		resourceCache = [[[sender mainFrame] dataSource] subresources];
+		
+		_hasJQuery = [self scanCacheForResourceWithName:@"jquery"];
+		_hasJQueryUI = [self scanCacheForResourceWithName:@"jqueryui"];
+		_hasJQueryUI = [self scanCacheForResourceWithName:@"jquery-ui"];
 		
 		NSString * urlString = [webview mainFrameURL];
 		
@@ -55,7 +74,7 @@
 		NSString * bodyTag = [self selectorForDOMNode:body];
 		NSString * bodyString = [(DOMHTMLElement *)body innerHTML];
 		
-		NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:urlString,@"url",
+		pageDict = [NSDictionary dictionaryWithObjectsAndKeys:urlString,@"url",
 							   doctype,@"doctype",
 							   htmlTag,@"htmlTag",
 							   headString,@"head",  
@@ -63,7 +82,15 @@
 							   bodyString,@"body", 
 							   nil];
 		
-		[[NSNotificationCenter defaultCenter] postNotificationName:nnRSSWebviewFrameDidFinishLoad object:dict];
+		[[NSNotificationCenter defaultCenter] postNotificationName:nnRSSWebviewFrameDidFinishLoad object:pageDict];
+		
+//		NSLog(@"%s- [%04d] %@", __PRETTY_FUNCTION__, __LINE__, [pageDict valueForKey:@"doctype"]);
+//		NSLog(@"%s- [%04d] %@", __PRETTY_FUNCTION__, __LINE__, [pageDict valueForKey:@"htmlTag"]);
+//		NSLog(@"%s- [%04d] %@", __PRETTY_FUNCTION__, __LINE__, [pageDict valueForKey:@"head"]);
+//		NSLog(@"%s- [%04d] %@", __PRETTY_FUNCTION__, __LINE__, [pageDict valueForKey:@"bodyTag"]);
+//		NSLog(@"%s- [%04d] %@", __PRETTY_FUNCTION__, __LINE__, [pageDict valueForKey:@"body"]);
+		
+		
 	}
 }
 
@@ -180,7 +207,9 @@
 		[item3 setEnabled:NO];
 	}
 	
-	return [NSArray arrayWithObjects:item1,item2,item3,nil];
+	
+	NSMutableArray * myMenu = [NSMutableArray arrayWithObjects:item1,item2,item3,nil];
+	return [myMenu arrayByAddingObjectsFromArray:defaultMenuItems];
 }
 
 
@@ -212,5 +241,49 @@
 	[editor setConditionSelectorStringValue:[sender representedObject] ];
 }
 
+
+#pragma mark - Receive instruction to reload html, insert jQuery/-UI and the custom behaviours
+
+- (void) injectScript:(NSNotification *) note {
+	
+	NSString * script = [note object];
+	
+	NSString * page = [pageDict valueForKey:@"doctype"];
+	page = [page stringByAppendingFormat:@"\n<%@>\n<HEAD>\n",[pageDict valueForKey:@"htmlTag"]];
+	
+	if( ! _hasJQuery || ! _hasJQueryUI )
+	{
+		page = [page stringByAppendingString:@"<script id=\"Your Google API key\" type=\"text/javascript\""];
+		page = [page stringByAppendingFormat:@" src=\"https://www.google.com/jsapi?key=%@\">", [[NSUserDefaults standardUserDefaults] valueForKey:@"googleAPIKey"]];
+		page = [page stringByAppendingString:@"</script>\n"];
+	}
+	if( ! _hasJQuery )
+	{
+		page = [page stringByAppendingString:@"<script id=\"jquery-loader\" type=\"text/javascript\">"];
+		page = [page stringByAppendingFormat:@"\tgoogle.load('jquery','%@');", [[NSUserDefaults standardUserDefaults] valueForKey:@"jqueryVersion"]];
+		page = [page stringByAppendingString:@"</script>\n"];
+	}
+	if( ! _hasJQueryUI )
+	{
+		page = [page stringByAppendingString:@"<script id=\"jquery-ui-loader\">"];
+		page = [page stringByAppendingFormat:@"\tgoogle.load('jquery-ui','%@');", [[NSUserDefaults standardUserDefaults] valueForKey:@"jqueryUIVersion"]];
+		page = [page stringByAppendingString:@"</script>\n"];
+	}
+	
+	page = [page stringByAppendingFormat:@"%@\n",[pageDict valueForKey:@"head"]];
+	page = [page stringByAppendingString:@"</HEAD>\n"];
+	page = [page stringByAppendingFormat:@"<%@>\n",[pageDict valueForKey:@"bodyTag"]];
+	page = [page stringByAppendingFormat:@"%@\n",[pageDict valueForKey:@"body"]];
+	
+	page = [page stringByAppendingString:@"<!-- ** RSTrixie generated script ** -->\n"];
+	page = [page stringByAppendingString:@"<script id=\"RSTrixieScript\" type=\"text/javascript\">\njQuery().ready(function(){\n"];
+	
+	page = [page stringByAppendingString:script];
+	
+	page = [page stringByAppendingString:@"</script>"];
+	page = [page stringByAppendingString:@"</BODY>\n</HTML>\n"];
+	
+	[[webview mainFrame] loadHTMLString:page baseURL:[NSURL URLWithString:[webview mainFrameURL]]];
+}
 
 @end

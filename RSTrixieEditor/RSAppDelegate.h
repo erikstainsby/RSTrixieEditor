@@ -11,6 +11,7 @@
 
 #import <RSTrixiePlugin/RSTrixiePlugin.h>
 #import "RSTrixieEditor.h"
+#import "RSTrixieTable.h"
 #import "RSTrixieBrowser.h"
 #import "PreferencesController.h"
 
@@ -18,10 +19,15 @@
 
 	//@property (retain) IBOutlet NSWindow * window;
 @property (retain) IBOutlet RSTrixieEditor * editorController;
+@property (retain) IBOutlet RSTrixieTable * tableController;
 @property (retain) IBOutlet RSTrixieBrowser * browserController;
 @property (retain) IBOutlet PreferencesController * prefsController; 
 
-
+- (IBAction) showBrowser:(id)sender;
+- (IBAction) showEditor:(id)sender;
 - (IBAction) showPreferences:(id)sender;
+- (IBAction) showListTable:(id)sender;
+- (IBAction) showEditorOrListing:(id)sender;
+
 
 @end

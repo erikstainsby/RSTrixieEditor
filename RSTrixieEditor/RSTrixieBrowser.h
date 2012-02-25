@@ -8,14 +8,21 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
+#import <RSTrixiePlugin/RSTrixieRule.h>
 #import "RSTrixieEditor.h"
 
 @interface RSTrixieBrowser : NSWindowController < NSComboBoxDataSource, NSComboBoxDelegate >
+{
+	BOOL _hasJQuery;
+	BOOL _hasJQueryUI;
+}
+
 
 @property (retain) NSArray * resourceCache;
 @property (retain) NSMutableArray * history;
 @property (retain) IBOutlet NSComboBox * urlLocationBox;
 @property (retain) IBOutlet WebView * webview;
+@property (retain) IBOutlet NSDictionary * pageDict;
 
 @property (retain) RSTrixieEditor * editor;
 
@@ -46,5 +53,10 @@
 - (IBAction) quickSetActionSelector:(id)sender;
 - (IBAction) quickSetReactionSelector:(id)sender;
 - (IBAction) quickSetConditionSelector:(id)sender;
+
+#pragma mark - Receive instruction to reload html
+
+- (IBAction) injectScript:(id)sender;
+
 
 @end
