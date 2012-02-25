@@ -40,6 +40,9 @@
 		03530C2414F09F69002E9A5E /* ActionKeyUp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C2314F09F69002E9A5E /* ActionKeyUp.bundle */; };
 		03530C9014F0A9F1002E9A5E /* ReactionAddClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C8F14F0A9F1002E9A5E /* ReactionAddClass.bundle */; };
 		03530C9214F0A9F4002E9A5E /* ReactionRemoveClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C9114F0A9F4002E9A5E /* ReactionRemoveClass.bundle */; };
+		035BD8A814F87A2C00AED64D /* RSTrixieTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 035BD8A614F87A2C00AED64D /* RSTrixieTable.m */; };
+		035BD8A914F87A2C00AED64D /* RSTrixieTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035BD8A714F87A2C00AED64D /* RSTrixieTable.xib */; };
+		037063AE14F73CD100B3AF0D /* RSTrixie-constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 037063AD14F73CD100B3AF0D /* RSTrixie-constants.m */; };
 		038655BA14F1751F0054E026 /* ConditionHasClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 038655B914F1751F0054E026 /* ConditionHasClass.bundle */; };
 		0386561A14F18C190054E026 /* ConditionValue.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386561914F18C190054E026 /* ConditionValue.bundle */; };
 		0386564514F18C800054E026 /* ConditionStatus.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386564414F18C800054E026 /* ConditionStatus.bundle */; };
@@ -128,6 +131,11 @@
 		03530C2314F09F69002E9A5E /* ActionKeyUp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ActionKeyUp.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03530C8F14F0A9F1002E9A5E /* ReactionAddClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ReactionAddClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03530C9114F0A9F4002E9A5E /* ReactionRemoveClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ReactionRemoveClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		035BD8A514F87A2C00AED64D /* RSTrixieTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTrixieTable.h; path = ../../RSTrixieTable.h; sourceTree = "<group>"; };
+		035BD8A614F87A2C00AED64D /* RSTrixieTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTrixieTable.m; path = ../../RSTrixieTable.m; sourceTree = "<group>"; };
+		035BD8A714F87A2C00AED64D /* RSTrixieTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSTrixieTable.xib; path = ../../RSTrixieTable.xib; sourceTree = "<group>"; };
+		037063AB14F736CF00B3AF0D /* RSTrixie-constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSTrixie-constants.h"; sourceTree = "<group>"; };
+		037063AD14F73CD100B3AF0D /* RSTrixie-constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSTrixie-constants.m"; sourceTree = "<group>"; };
 		038655B914F1751F0054E026 /* ConditionHasClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionHasClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0386561914F18C190054E026 /* ConditionValue.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionValue.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0386564414F18C800054E026 /* ConditionStatus.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionStatus.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +231,8 @@
 				0353093F14F02EE9002E9A5E /* Credits.rtf */,
 				0301B0DE14F5FBF800CDB154 /* ResponderTrace.h */,
 				0301B0DF14F5FBF800CDB154 /* ResponderTrace.m */,
+				037063AB14F736CF00B3AF0D /* RSTrixie-constants.h */,
+				037063AD14F73CD100B3AF0D /* RSTrixie-constants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -247,6 +257,9 @@
 				0353095814F031A9002E9A5E /* RSTrixieEditor.xib */,
 				03FCEBD114F324BF00CD55B6 /* HelpController.h */,
 				03FCEBD214F324BF00CD55B6 /* HelpController.m */,
+				035BD8A514F87A2C00AED64D /* RSTrixieTable.h */,
+				035BD8A614F87A2C00AED64D /* RSTrixieTable.m */,
+				035BD8A714F87A2C00AED64D /* RSTrixieTable.xib */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -353,6 +366,7 @@
 				0353095A14F031A9002E9A5E /* RSTrixieEditor.xib in Resources */,
 				0353096314F033F7002E9A5E /* RSTrixieBrowser.xib in Resources */,
 				03FCEBDB14F47D9900CD55B6 /* PreferencesController.xib in Resources */,
+				035BD8A914F87A2C00AED64D /* RSTrixieTable.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +386,8 @@
 				03FCEBD314F324BF00CD55B6 /* HelpController.m in Sources */,
 				03FCEBDA14F47D9900CD55B6 /* PreferencesController.m in Sources */,
 				0301B0E014F5FBF800CDB154 /* ResponderTrace.m in Sources */,
+				037063AE14F73CD100B3AF0D /* RSTrixie-constants.m in Sources */,
+				035BD8A814F87A2C00AED64D /* RSTrixieTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
