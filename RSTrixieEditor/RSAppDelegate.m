@@ -33,7 +33,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	
+	[self showBrowser:self];
+	[self showListTable:self];
 }
 
 - (IBAction) showEditorOrListing:(id)sender {

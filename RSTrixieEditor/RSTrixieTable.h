@@ -8,16 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <RSTrixiePlugin/RSTrixieRule.h>
+#import "RSTrixieTableDelegate.h"
 
-@interface RSTrixieTable : NSWindowController < NSTableViewDataSource >
+@interface RSTrixieTable : NSWindowController
 
-@property (retain) IBOutlet NSMutableArray * rules;
-@property (retain) IBOutlet NSTableView * tableView;
+@property (retain) IBOutlet RSTrixieTableDelegate * tableController;
 
-- (void) appendRule:(NSNotification*)note;
-
-
-- (NSInteger) numberOfRowsInTableView:(NSTableView *)aTableView;
-- (id) tableView:(NSTableView*)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
+- (void) appendRule:(NSNotification*) note;
 
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0301B0E014F5FBF800CDB154 /* ResponderTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301B0DF14F5FBF800CDB154 /* ResponderTrace.m */; };
+		0310A15014FB329300C38D56 /* RSTrixieTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0310A14E14FB329300C38D56 /* RSTrixieTable.m */; };
+		0310A15114FB329300C38D56 /* RSTrixieTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310A14F14FB329300C38D56 /* RSTrixieTable.xib */; };
+		034CDCE714FF074C00193D04 /* GCGenericTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CDCE514FF074C00193D04 /* GCGenericTableController.m */; };
+		034CDCEA14FF07B200193D04 /* RSTrixieTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CDCE914FF07B200193D04 /* RSTrixieTableDelegate.m */; };
 		0353093114F02EE9002E9A5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0353093014F02EE9002E9A5E /* Cocoa.framework */; };
 		0353093B14F02EE9002E9A5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0353093914F02EE9002E9A5E /* InfoPlist.strings */; };
 		0353093D14F02EE9002E9A5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353093C14F02EE9002E9A5E /* main.m */; };
@@ -40,8 +44,6 @@
 		03530C2414F09F69002E9A5E /* ActionKeyUp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C2314F09F69002E9A5E /* ActionKeyUp.bundle */; };
 		03530C9014F0A9F1002E9A5E /* ReactionAddClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C8F14F0A9F1002E9A5E /* ReactionAddClass.bundle */; };
 		03530C9214F0A9F4002E9A5E /* ReactionRemoveClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03530C9114F0A9F4002E9A5E /* ReactionRemoveClass.bundle */; };
-		035BD8A814F87A2C00AED64D /* RSTrixieTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 035BD8A614F87A2C00AED64D /* RSTrixieTable.m */; };
-		035BD8A914F87A2C00AED64D /* RSTrixieTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035BD8A714F87A2C00AED64D /* RSTrixieTable.xib */; };
 		037063AE14F73CD100B3AF0D /* RSTrixie-constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 037063AD14F73CD100B3AF0D /* RSTrixie-constants.m */; };
 		038655BA14F1751F0054E026 /* ConditionHasClass.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 038655B914F1751F0054E026 /* ConditionHasClass.bundle */; };
 		0386561A14F18C190054E026 /* ConditionValue.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0386561914F18C190054E026 /* ConditionValue.bundle */; };
@@ -89,6 +91,13 @@
 /* Begin PBXFileReference section */
 		0301B0DE14F5FBF800CDB154 /* ResponderTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderTrace.h; sourceTree = "<group>"; };
 		0301B0DF14F5FBF800CDB154 /* ResponderTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTrace.m; sourceTree = "<group>"; };
+		0310A14D14FB329300C38D56 /* RSTrixieTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTrixieTable.h; sourceTree = "<group>"; };
+		0310A14E14FB329300C38D56 /* RSTrixieTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTrixieTable.m; sourceTree = "<group>"; };
+		0310A14F14FB329300C38D56 /* RSTrixieTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSTrixieTable.xib; sourceTree = "<group>"; };
+		034CDCE514FF074C00193D04 /* GCGenericTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCGenericTableController.m; sourceTree = "<group>"; };
+		034CDCE614FF074C00193D04 /* GCGenericTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCGenericTableController.h; sourceTree = "<group>"; };
+		034CDCE814FF07B200193D04 /* RSTrixieTableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTrixieTableDelegate.h; sourceTree = "<group>"; };
+		034CDCE914FF07B200193D04 /* RSTrixieTableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTrixieTableDelegate.m; sourceTree = "<group>"; };
 		0353092C14F02EE9002E9A5E /* RSTrixieEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTrixieEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0353093014F02EE9002E9A5E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0353093314F02EE9002E9A5E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -131,9 +140,6 @@
 		03530C2314F09F69002E9A5E /* ActionKeyUp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ActionKeyUp.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03530C8F14F0A9F1002E9A5E /* ReactionAddClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ReactionAddClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		03530C9114F0A9F4002E9A5E /* ReactionRemoveClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ReactionRemoveClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		035BD8A514F87A2C00AED64D /* RSTrixieTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTrixieTable.h; path = ../../RSTrixieTable.h; sourceTree = "<group>"; };
-		035BD8A614F87A2C00AED64D /* RSTrixieTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTrixieTable.m; path = ../../RSTrixieTable.m; sourceTree = "<group>"; };
-		035BD8A714F87A2C00AED64D /* RSTrixieTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSTrixieTable.xib; path = ../../RSTrixieTable.xib; sourceTree = "<group>"; };
 		037063AB14F736CF00B3AF0D /* RSTrixie-constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSTrixie-constants.h"; sourceTree = "<group>"; };
 		037063AD14F73CD100B3AF0D /* RSTrixie-constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSTrixie-constants.m"; sourceTree = "<group>"; };
 		038655B914F1751F0054E026 /* ConditionHasClass.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ConditionHasClass.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +168,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0310A15214FB32A200C38D56 /* Rules Table */ = {
+			isa = PBXGroup;
+			children = (
+				034CDCE614FF074C00193D04 /* GCGenericTableController.h */,
+				034CDCE514FF074C00193D04 /* GCGenericTableController.m */,
+				034CDCE814FF07B200193D04 /* RSTrixieTableDelegate.h */,
+				034CDCE914FF07B200193D04 /* RSTrixieTableDelegate.m */,
+				0310A14D14FB329300C38D56 /* RSTrixieTable.h */,
+				0310A14E14FB329300C38D56 /* RSTrixieTable.m */,
+				0310A14F14FB329300C38D56 /* RSTrixieTable.xib */,
+			);
+			name = "Rules Table";
+			sourceTree = "<group>";
+		};
 		0353092114F02EE9002E9A5E = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +230,7 @@
 				03FCEBD914F47D9900CD55B6 /* PreferencesController.xib */,
 				0353096A14F05055002E9A5E /* Editor */,
 				0353096914F05036002E9A5E /* Browser */,
+				0310A15214FB32A200C38D56 /* Rules Table */,
 				0353094514F02EEA002E9A5E /* MainMenu.xib */,
 				0353093714F02EE9002E9A5E /* Supporting Files */,
 			);
@@ -257,9 +278,6 @@
 				0353095814F031A9002E9A5E /* RSTrixieEditor.xib */,
 				03FCEBD114F324BF00CD55B6 /* HelpController.h */,
 				03FCEBD214F324BF00CD55B6 /* HelpController.m */,
-				035BD8A514F87A2C00AED64D /* RSTrixieTable.h */,
-				035BD8A614F87A2C00AED64D /* RSTrixieTable.m */,
-				035BD8A714F87A2C00AED64D /* RSTrixieTable.xib */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -366,7 +384,7 @@
 				0353095A14F031A9002E9A5E /* RSTrixieEditor.xib in Resources */,
 				0353096314F033F7002E9A5E /* RSTrixieBrowser.xib in Resources */,
 				03FCEBDB14F47D9900CD55B6 /* PreferencesController.xib in Resources */,
-				035BD8A914F87A2C00AED64D /* RSTrixieTable.xib in Resources */,
+				0310A15114FB329300C38D56 /* RSTrixieTable.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +405,9 @@
 				03FCEBDA14F47D9900CD55B6 /* PreferencesController.m in Sources */,
 				0301B0E014F5FBF800CDB154 /* ResponderTrace.m in Sources */,
 				037063AE14F73CD100B3AF0D /* RSTrixie-constants.m in Sources */,
-				035BD8A814F87A2C00AED64D /* RSTrixieTable.m in Sources */,
+				0310A15014FB329300C38D56 /* RSTrixieTable.m in Sources */,
+				034CDCE714FF074C00193D04 /* GCGenericTableController.m in Sources */,
+				034CDCEA14FF07B200193D04 /* RSTrixieTableDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
