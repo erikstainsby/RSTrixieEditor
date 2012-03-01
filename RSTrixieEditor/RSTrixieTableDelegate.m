@@ -13,13 +13,14 @@
 
 
 - (id)	newContentObjectForTableController:(GCGenericTableController*) cllr {
+		// a generic empty row with our object
 	return [[RSTrixieRule alloc] init];
 }
 
 
 - (id) tableView:(NSTableView*)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
 	
-	NSLog(@"%s- [%04d] column %@, row %lu", __PRETTY_FUNCTION__, __LINE__, [tableColumn identifier], row);
+		//	NSLog(@"%s- [%04d] column %@, row %lu", __PRETTY_FUNCTION__, __LINE__, [tableColumn identifier], row);
 	
 	id value = nil;
 	RSTrixieRule * rule = [mContent objectAtIndex:row];
@@ -123,7 +124,7 @@
 	else if([[tableColumn identifier] isEqualToString:@"comment"]) {
 		value = [rule comment];
 	}
-	NSLog(@"%s- [%04d] returning: %@", __PRETTY_FUNCTION__, __LINE__, value);
+		//	NSLog(@"%s- [%04d] returning: %@", __PRETTY_FUNCTION__, __LINE__, value);
 	return value;	
 }
 

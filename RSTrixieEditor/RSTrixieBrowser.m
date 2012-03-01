@@ -242,7 +242,7 @@
 }
 
 
-#pragma mark - Receive instruction to reload html, insert jQuery/-UI and the custom behaviours
+#pragma mark - Receive instruction to reload html, insert jQuery/-UI if required, and injecting the custom behaviours
 
 - (void) injectScript:(NSNotification *) note {
 	
@@ -276,7 +276,7 @@
 	page = [page stringByAppendingFormat:@"%@\n",[pageDict valueForKey:@"body"]];
 	
 	page = [page stringByAppendingString:@"<!-- ** RSTrixie generated script ** -->\n"];
-	page = [page stringByAppendingString:@"<script id=\"RSTrixieScript\" type=\"text/javascript\">\njQuery().ready(function(){\n"];
+	page = [page stringByAppendingString:@"<script id=\"RSTrixieScript\" type=\"text/javascript\">\njQuery().ready(function($){\n"];
 	
 	page = [page stringByAppendingString:script];
 	
